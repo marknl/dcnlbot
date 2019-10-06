@@ -1,0 +1,25 @@
+{
+  "name": "dcnlbot",
+  "version": "1.0.0",
+  "description": "Dutch Collective Discord Bot",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marknl/dcnlbot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "marknl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marknl/dcnlbot/issues"
+  },
+  "homepage": "https://github.com/marknl/dcnlbot#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "moment": "^2.24.0",
+    "node-getopt": "^0.3.2"
+  }
+}
