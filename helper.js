@@ -1,19 +1,7 @@
-const Fs = module.require("fs");
+
 
 function loadCommand(bot) {
-    Fs.readdir("./commands/", (err, files) => {
-        console.log(`Loading commands..`);
-        if (err) console.error(err);
 
-        let jsFiles = files.filter(f => f.split(".").pop() === "js");
-        if (jsFiles.length > 0) {
-            jsFiles.forEach((f, i) => {
-                let props = require(`./commands/${f}`);
-                console.log(`- ${f} loaded.`);
-                bot.commands.set(props.help.name, props);
-            });
-        }
-    });
 }
 
 function genericThumbnail() {
