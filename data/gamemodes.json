@@ -1,0 +1,99 @@
+{
+  "raid": {
+    "mode": {
+      "lev": {
+        "name": "Leviathan",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "levpres": {
+        "name": "Leviathan (Prestige)",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "eow": {
+        "name": "Eater of Worlds",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "sos": {
+        "name": "Spire of Stars",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "lw": {
+        "name": "Last Wish",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "sotp": {
+        "name": "Scourge of the Past",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "cos": {
+        "name": "Crown of Sorrow",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "gos": {
+        "name": "Garden of Salvation",
+        "maxplayers": 6,
+        "thumbnail": ""
+      }
+    },
+    "color": "#00ff00",
+    "thumbnail": "http://vignette3.wikia.nocookie.net/destinypedia/images/2/26/Raid_Emblem.png"
+  },
+  "crucible": {
+    "mode": {
+      "clash": {
+        "name": "Clash",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "labs": {
+        "name": "Crucible Labs",
+        "maxplayers": 3,
+        "thumbnail": ""
+      },
+      "showdown": {
+        "name": "Showdown",
+        "maxplayers": 4,
+        "thumbnail": ""
+      },
+      "rumble": {
+        "name": "Rumble",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "control": {
+        "name": "Control",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "survival": {
+        "name": "Survival",
+        "maxplayers": 3,
+        "thumbnail": ""
+      },
+      "private": {
+        "name": "Private Match",
+        "maxplayers": 12,
+        "thumbnail": ""
+      },
+      "ironbanner": {
+        "name": "Iron Banner",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "classic": {
+        "name": "Classic Mix",
+        "maxplayers": 6,
+        "thumbnail": ""
+      }
+    },
+    "color": "#ff0000",
+    "thumbnail": "http://vignette1.wikia.nocookie.net/destiny/images/2/23/Schmelztiegel_Icon.png/revision/latest?path-prefix=de"
+  }
+}
