@@ -5,11 +5,57 @@ class MessageReactionAdd {
         this.client = client;
     }
 
-    run(reaction, user) {
+    async run(reaction, user) {
         // Ignore reacts the bot sets
         if (user.bot === true) return;
 
-        console.log(`${user.username} added their "${reaction.emoji.name}" reaction.`);
+        // Grab the original embedMessage
+        let [ orgEmbed ] = reaction.message.embeds;
+
+        // Ignore reactions not added to an activity
+        if (orgEmbed.title === 'Crucible activiteit' || orgEmbed.title === 'Raid activiteit') {
+            console.log(`${user.username} added their "${reaction.emoji.name}" reaction.`);
+
+            let embedReactions = reaction.message.reactions;
+
+            // First react on the users' react and set the proper reacts.
+            switch(reaction.emoji.name) {
+                case '✅':
+                    await embedReactions.get('❎').remove(user);
+                    await embedReactions.get('🕒').remove(user);
+                    break;
+                case '❎':
+                    await embedReactions.get('✅').remove(user);
+                    await embedReactions.get('🕒').remove(user);
+                    break;
+                case '🕒':
+                    await embedReactions.get('✅').remove(user);
+                    await embedReactions.get('❎').remove(user);
+                    break;
+            }
+
+            // Now we get the reacts and update the embed
+            await embedReactions.get('✅').fetchUsers().then(users => {
+                const participants = users.filter(user => !user.bot).map((user) => { return user.username });
+                let participantsPrint = (participants.length > 0) ? participants.join('\r\n') : 'Geen';
+
+                orgEmbed.fields[5].name = orgEmbed.fields[5].name.replace(/\(\d\/(\d+)\)/i,`(${participants.length}/$1)`);
+                orgEmbed.fields[5].value = `\`\`\`${participantsPrint}\`\`\``;
+            });
+
+            await embedReactions.get('🕒').fetchUsers().then(users => {
+                const reserves = users.filter(user => !user.bot).map((user) => { return user.username });
+                let reservesPrint = (reserves.length > 0) ? reserves.join('\r\n') : 'Geen';
+
+                orgEmbed.fields[6].name = orgEmbed.fields[6].name.replace(/\(\d\)/i,`(${reserves.length})`);
+                orgEmbed.fields[6].value = `\`\`\`${reservesPrint}\`\`\``;
+            });
+
+            // Edit RichEmbed with new values
+            reaction.message.edit(new RichEmbed(orgEmbed))
+                .then(msg => console.log('Activity updated.'))
+                .catch(console.error);
+        }
 
         /**
          fields[0] = name
@@ -20,44 +66,16 @@ class MessageReactionAdd {
          fields[5] = participants
          fields[6] = reserves
          **/
-        let embed = reaction.message.embeds[0];
-        let embedReactions = reaction.message.reactions;
-
-        let participants = embedReactions.get('✅').users.map(user => {
-            return (user.bot === false) ? user.username : null;
-        });
-        let reserves = embedReactions.get('🕒').users.map(user => {
-            return (user.bot === false) ? user.username : null;
-        });
-
-        console.log(participants);
-        console.log(reserves);
 
         // Update Participants
-        embed.fields[5].name = embed.fields[5].name.replace(/\(\d\/(\d+)\)/i,`(${participants.length}/$1)`);
-        if (participants.length === 0) {
-            embed.fields[5].value = '```Geen```';
-        } else {
-            embed.fields[5].value = `\`\`\`${this.convArrayToNewLines(participants)}\`\`\``;
-        }
-
-        // Update Reserves
-        embed.fields[6].name = embed.fields[6].name.replace(/\(\d\)/i,`(${reserves.length})`);
-        if (reserves.length === 0) {
-            embed.fields[6].value = '```Geen```';
-        } else {
-            embed.fields[6].value = `\`\`\`${this.convArrayToNewLines(reserves)}\`\`\``;
-        }
-
-
-        // Edit RichEmbed with new values
-        reaction.message.edit(new RichEmbed(embed))
-            .then(msg => console.log('Activity updated.'))
-            .catch(console.error);
-    }
-
-    convArrayToNewLines(array) {
-        return array.join('\r\n');
+        // if (participants.length === 0) {
+        //     orgEmbed.fields[5].value = '```Geen```';
+        // }
+        //
+        // // Update Reserves
+        // if (reserves.length === 0) {
+        //     orgEmbed.fields[6].value = '```Geen```';
+        // }
     }
 }
 

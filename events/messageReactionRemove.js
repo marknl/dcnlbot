@@ -1,49 +1,44 @@
+const { RichEmbed } = module.require('discord.js');
+
 class MessageReactionRemove {
     constructor(client) {
         this.client = client;
     }
 
-    run(reaction, user) {
+    async run(reaction, user) {
         // Ignore reacts the bot sets
         if (user.bot === true) return;
 
-        console.log(`${user.username} removed their "${reaction.emoji.name}" reaction.`);
+        // Grab the original embedMessage
+        let [ orgEmbed ] = reaction.message.embeds;
 
-        /**
-         fields[0] = name
-         fields[1] = note
-         fields[2] = date
-         fields[3] = maxplayers
-         fields[4] = -BLANK-
-         fields[5] = participants
-         fields[6] = reserves
-         */
-        let embed = reaction.message.embeds[0];
-        let embedReactions = reaction.message.reactions;
+        // Ignore reactions not added to an activity
+        if (orgEmbed.title === 'Crucible activiteit' || orgEmbed.title === 'Raid activiteit') {
+            console.log(`${user.username} removed their "${reaction.emoji.name}" reaction.`);
 
-        let participants = embedReactions.get('✅').users.map(user => {
-            return user.username;
-        });
-        let reserves = embedReactions.get('🕒').users.map(user => {
-            return user.username;
-        });
+            let embedReactions = reaction.message.reactions;
 
-        // Update Participants
-        embed.fields[5].name = embed.fields[5].name.replace(/\(\d\/(\d+)\)/i,`(${participants.length}/$1)`);
-        embed.fields[5].value = `\`\`\`${this.convArrayToNewLines(participants)}\`\`\``;
+            await embedReactions.get('✅').fetchUsers().then(users => {
+                const participants = users.filter(user => !user.bot).map((user) => { return user.username });
+                let participantsPrint = (participants.length > 0) ? participants.join('\r\n') : 'Geen';
 
-        // Update Reserves
-        embed.fields[6].name = embed.fields[6].name.replace(/\(\d\)/i,`(${reserves.length})`);
-        embed.fields[6].value = `\`\`\`${this.convArrayToNewLines(reserves)}\`\`\``;
+                orgEmbed.fields[5].name = orgEmbed.fields[5].name.replace(/\(\d\/(\d+)\)/i,`(${participants.length}/$1)`);
+                orgEmbed.fields[5].value = `\`\`\`${participantsPrint}\`\`\``;
+            });
 
-        // Edit RichEmbed with new values
-        reaction.message.edit(new RichEmbed(embed))
-            .then(msg => console.log('Activity updated.'))
-            .catch(console.error);
-    }
+            await embedReactions.get('🕒').fetchUsers().then(users => {
+                const reserves = users.filter(user => !user.bot).map((user) => { return user.username });
+                let reservesPrint = (reserves.length > 0) ? reserves.join('\r\n') : 'Geen';
 
-    convArrayToNewLines(array) {
-        return array.join('\r\n');
+                orgEmbed.fields[6].name = orgEmbed.fields[6].name.replace(/\(\d\)/i,`(${reserves.length})`);
+                orgEmbed.fields[6].value = `\`\`\`${reservesPrint}\`\`\``;
+            });
+
+            // Edit RichEmbed with new values
+            reaction.message.edit(new RichEmbed(orgEmbed))
+                .then(msg => console.log('Activity updated.'))
+                .catch(console.error);
+        }
     }
 }
 
