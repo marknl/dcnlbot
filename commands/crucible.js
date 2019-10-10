@@ -2,7 +2,16 @@ const Moment = module.require('moment');
 const Command = require('../lib/Command');
 const GameMode = new (require('../lib/GameMode'));
 
+/**
+ * Crucible
+ * @class
+ * @extends Command
+ */
 class Crucible extends Command {
+    /**
+     * Constructor
+     * @param {Discord.Client} client
+     */
     constructor(client) {
         super(client, {
             name: "crucible",
@@ -30,6 +39,12 @@ class Crucible extends Command {
             Dit is een optioneel veld.`;
     }
 
+    /**
+     *
+     * @param {Discord.Message} message
+     * @param {Array} args
+     * @returns {boolean}
+     */
     run(message, args) {
         if (this.validateInput('crucible', args, this.data) === true) {
 

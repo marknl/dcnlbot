@@ -3,7 +3,6 @@
  */
 const DCNLBot = module.require("./lib/DCNLBot");
 console.log('Loading Dutch Collective Discord Bot...');
-const Discord = module.require('discord.js');
 
 // Initialise client
 const bot = new DCNLBot({ config: "./config" });

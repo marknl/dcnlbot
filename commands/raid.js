@@ -2,7 +2,16 @@ const Moment = module.require('moment');
 const Command = require('../lib/Command');
 const GameMode = new (require('../lib/GameMode'));
 
+/**
+ * Raid
+ * @class
+ * @extends Command
+ */
 class Raid extends Command {
+    /**
+     * Constructor
+     * @param {Discord.Client} client
+     */
     constructor(client) {
         super(client, {
             name: "raid",
@@ -30,6 +39,12 @@ class Raid extends Command {
             Dit is een optioneel veld.`;
     }
 
+    /**
+     * Run the event
+     * @param {Discord.Message} message
+     * @param {Array} args
+     * @returns {boolean}
+     */
     run(message, args) {
         if (this.validateInput('raid', args, this.data) === true) {
 

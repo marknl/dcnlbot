@@ -1,4 +1,11 @@
 {
 	"token": "TOKEN",
-	"prefix": "!"
+	"prefix": "!",
+	"paths": {
+		"commands": "./commands",
+		"events": "./events"
+	},
+	"clientOptions": {
+		"disableEveryone": true
+	}
 }

@@ -1,10 +1,29 @@
 const { RichEmbed } = module.require('discord.js');
 
+/**
+ * Class MessageReactionAdd
+ * @class
+ */
 class MessageReactionAdd {
+    /**
+     * Constructor
+     * @param {Discord.Client} client
+     */
     constructor(client) {
+        /**
+         * Client object
+         * @type {Discord.Client}
+         */
         this.client = client;
     }
 
+    /**
+     * Run the event
+     * @async
+     * @param {Discord.MessageReaction} reaction
+     * @param {Discord.User} user
+     * @returns {Promise<void>}
+     */
     async run(reaction, user) {
         // Ignore reacts the bot sets
         if (user.bot === true) return;
@@ -56,26 +75,6 @@ class MessageReactionAdd {
                 .then(msg => console.log('Activity updated.'))
                 .catch(console.error);
         }
-
-        /**
-         fields[0] = name
-         fields[1] = note
-         fields[2] = date
-         fields[3] = maxplayers
-         fields[4] = -BLANK-
-         fields[5] = participants
-         fields[6] = reserves
-         **/
-
-        // Update Participants
-        // if (participants.length === 0) {
-        //     orgEmbed.fields[5].value = '```Geen```';
-        // }
-        //
-        // // Update Reserves
-        // if (reserves.length === 0) {
-        //     orgEmbed.fields[6].value = '```Geen```';
-        // }
     }
 }
 

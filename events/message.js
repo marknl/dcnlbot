@@ -1,8 +1,25 @@
+/**
+ * Class Message
+ * @class
+ */
 class Message {
+    /**
+     * Constructor
+     * @param {Discord.Client} client
+     */
     constructor(client) {
+        /**
+         * Client object
+         * @type {Discord.Client}
+         */
         this.client = client;
     }
 
+    /**
+     * Run the event
+     * @param {Discord.Message} message
+     * @returns {void | Promise<Channel> | Promise<Guild> | Promise<GuildChannel> | Promise<Invite> | Promise<Message> | Promise<PermissionOverwrites> | Promise<Role> | Promise<void> | boolean}
+     */
     run(message) {
         // Ignore other bots, DM's and messages not starting with our prefix
         if (message.author.bot || message.channel.type === 'dm' || !message.content.startsWith(this.client.config.prefix)) return;
