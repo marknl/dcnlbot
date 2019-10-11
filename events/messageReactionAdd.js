@@ -57,9 +57,11 @@ class MessageReactionAdd {
             await embedReactions.get('✅').fetchUsers().then(users => {
                 const participants = users.filter(user => !user.bot).map((user) => { return user.username });
                 let participantsPrint = (participants.length > 0) ? participants.join('\r\n') : 'Geen';
-
+                console.log(participantsPrint);
                 orgEmbed.fields[5].name = orgEmbed.fields[5].name.replace(/\(\d\/(\d+)\)/i,`(${participants.length}/$1)`);
-                orgEmbed.fields[5].value = `\`\`\`${participantsPrint}\`\`\``;
+                orgEmbed.fields[5].value = `\`\`\`
+${participantsPrint}
+\`\`\``;
             });
 
             await embedReactions.get('🕒').fetchUsers().then(users => {
@@ -67,7 +69,9 @@ class MessageReactionAdd {
                 let reservesPrint = (reserves.length > 0) ? reserves.join('\r\n') : 'Geen';
 
                 orgEmbed.fields[6].name = orgEmbed.fields[6].name.replace(/\(\d\)/i,`(${reserves.length})`);
-                orgEmbed.fields[6].value = `\`\`\`${reservesPrint}\`\`\``;
+                orgEmbed.fields[6].value = `\`\`\`
+${reservesPrint}
+\`\`\``;
             });
 
             // Edit RichEmbed with new values

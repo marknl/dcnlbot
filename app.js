@@ -15,3 +15,6 @@ bot.loadCommands(bot.config.paths.commands);
 
 // Load events
 bot.loadEvents(bot.config.paths.events);
+
+// Load tasks
+bot.loadTasks(bot.config.paths.tasks);
