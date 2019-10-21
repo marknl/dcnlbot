@@ -3,7 +3,8 @@
 	"prefix": "!",
 	"paths": {
 		"commands": "./commands",
-		"events": "./events"
+		"events": "./events",
+		"tasks": "./tasks"
 	},
 	"clientOptions": {
 		"disableEveryone": true
