@@ -1,5 +1,5 @@
 /**
- * Dutch Collective Discord Bot 
+ * Dutch Collective Discord Bot
  */
 const DCNLBot = module.require("./lib/DCNLBot");
 console.log('Loading Dutch Collective Discord Bot...');
