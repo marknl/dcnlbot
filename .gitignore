@@ -1,5 +1,4 @@
 .idea/
 node_modules/
-config.json
-config.dev.json
+*.json
 package-lock.json
