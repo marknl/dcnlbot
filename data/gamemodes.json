@@ -4,107 +4,112 @@
       "lev": {
         "name": "Leviathan",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": "./data/images/flavor/leviathan.png"
       },
       "levpres": {
         "name": "Leviathan (Prestige)",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": "./data/images/flavor/leviathan.png"
       },
       "eow": {
         "name": "Eater of Worlds",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": "./data/images/flavor/eater_of_worlds.png"
       },
       "eowpres": {
         "name": "Eater of Worlds",
         "maxplayers": 6,
-        "thumbnail": ""
+        "thumbnail": "./data/images/flavor/eater_of_worlds.png"
       },
       "sos": {
         "name": "Spire of Stars",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": "./data/images/flavor/spire_of_stars.png"
       },
       "sospres": {
         "name": "Spire of Stars Prestige",
         "maxplayers": 6,
-        "thumbnail": ""
+        "thumbnail": "./data/images/flavor/spire_of_stars.png"
       },
       "lw": {
         "name": "Last Wish",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": "./data/images/flavor/last_wish.png"
       },
       "sotp": {
         "name": "Scourge of the Past",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": "./data/images/flavor/scourge_of_the_past.png"
       },
       "cos": {
         "name": "Crown of Sorrow",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": "./data/images/flavor/crown_of_sorrow.png"
       },
       "gos": {
         "name": "Garden of Salvation",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": "./data/images/flavor/garden_of_salvation.png"
+      },
+      "throne": {
+        "name": "shattered Throne",
+        "maxplayers": 4,
+        "image": "./data/images/flavor/shattered_throne.png"
       }
     },
     "color": "#00ff00",
-    "thumbnail": "http://vignette3.wikia.nocookie.net/destinypedia/images/2/26/Raid_Emblem.png"
+    "thumbnail": "./data/images/badge/raid.png"
   },
   "crucible": {
     "mode": {
       "clash": {
         "name": "Clash",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": ""
       },
       "labs": {
         "name": "Crucible Labs",
         "maxplayers": 3,
-        "thumbnail": ""
+        "image": ""
       },
       "showdown": {
         "name": "Showdown",
         "maxplayers": 4,
-        "thumbnail": ""
+        "image": ""
       },
       "rumble": {
         "name": "Rumble",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": ""
       },
       "control": {
         "name": "Control",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": ""
       },
       "survival": {
         "name": "Survival",
         "maxplayers": 3,
-        "thumbnail": ""
+        "image": ""
       },
       "private": {
         "name": "Private Match",
         "maxplayers": 12,
-        "thumbnail": ""
+        "image": ""
       },
       "ironbanner": {
         "name": "Iron Banner",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": ""
       },
       "classic": {
         "name": "Classic Mix",
         "maxplayers": 6,
-        "thumbnail": ""
+        "image": ""
       }
     },
     "color": "#ff0000",
-    "thumbnail": "http://vignette1.wikia.nocookie.net/destiny/images/2/23/Schmelztiegel_Icon.png/revision/latest?path-prefix=de"
+    "thumbnail": "./data/images/badge/crucible.png"
   },
   "gambit": {
     "mode": {
@@ -120,6 +125,10 @@
       }
     },
     "color": "#7DD321",
-    "thumbnail": "https://guardian.services/wp-content/uploads/2018/10/Seal_Gambit.png"
+    "thumbnail": "./data/images/badge/gambit.png"
+  },
+  "custom": {
+    "color": "#0000ff",
+    "thumbnail": "./data/images/badge/custom.png"
   }
 }
