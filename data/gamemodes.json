@@ -16,8 +16,18 @@
         "maxplayers": 6,
         "thumbnail": ""
       },
+      "eowpres": {
+        "name": "Eater of Worlds",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
       "sos": {
         "name": "Spire of Stars",
+        "maxplayers": 6,
+        "thumbnail": ""
+      },
+      "sospres": {
+        "name": "Spire of Stars Prestige",
         "maxplayers": 6,
         "thumbnail": ""
       },
@@ -95,5 +105,21 @@
     },
     "color": "#ff0000",
     "thumbnail": "http://vignette1.wikia.nocookie.net/destiny/images/2/23/Schmelztiegel_Icon.png/revision/latest?path-prefix=de"
+  },
+  "gambit": {
+    "mode": {
+      "classic": {
+        "name": "Gambit Classic",
+        "maxplayers": 4,
+        "thumbnail": ""
+      },
+      "prime": {
+        "name": "Gambit Prime",
+        "maxplayers": 4,
+        "thumbnail": ""
+      }
+    },
+    "color": "#7DD321",
+    "thumbnail": "https://guardian.services/wp-content/uploads/2018/10/Seal_Gambit.png"
   }
 }

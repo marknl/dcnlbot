@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  dcnlbot:
+    build: .
+    environment:
+      TZ: 'Europe/Amsterdam'
+    ports:
+    - '49161:8080'
+    restart: unless-stopped
