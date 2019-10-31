@@ -4,131 +4,131 @@
       "lev": {
         "name": "Leviathan",
         "maxplayers": 6,
-        "image": "./data/images/flavor/leviathan.png"
+        "flavor": "https://i.imgur.com/NokqJCK.png"
       },
       "levpres": {
         "name": "Leviathan (Prestige)",
         "maxplayers": 6,
-        "image": "./data/images/flavor/leviathan.png"
+        "flavor": "https://i.imgur.com/NokqJCK.png"
       },
       "eow": {
         "name": "Eater of Worlds",
         "maxplayers": 6,
-        "image": "./data/images/flavor/eater_of_worlds.png"
+        "flavor": "https://i.imgur.com/jFOOZTJ.png"
       },
       "eowpres": {
-        "name": "Eater of Worlds",
+        "name": "Eater of Worlds (Prestige)",
         "maxplayers": 6,
-        "thumbnail": "./data/images/flavor/eater_of_worlds.png"
+        "flavor": "https://i.imgur.com/jFOOZTJ.png"
       },
       "sos": {
         "name": "Spire of Stars",
         "maxplayers": 6,
-        "image": "./data/images/flavor/spire_of_stars.png"
+        "flavor": "https://i.imgur.com/yDWkfYw.png"
       },
       "sospres": {
-        "name": "Spire of Stars Prestige",
+        "name": "Spire of Stars (Prestige)",
         "maxplayers": 6,
-        "thumbnail": "./data/images/flavor/spire_of_stars.png"
+        "flavor": "https://i.imgur.com/yDWkfYw.png"
       },
       "lw": {
         "name": "Last Wish",
         "maxplayers": 6,
-        "image": "./data/images/flavor/last_wish.png"
+        "flavor": "https://i.imgur.com/L92I94E.png"
       },
       "sotp": {
         "name": "Scourge of the Past",
         "maxplayers": 6,
-        "image": "./data/images/flavor/scourge_of_the_past.png"
+        "flavor": "https://i.imgur.com/ECCoIFh.png"
       },
       "cos": {
         "name": "Crown of Sorrow",
         "maxplayers": 6,
-        "image": "./data/images/flavor/crown_of_sorrow.png"
+        "flavor": "https://i.imgur.com/xiIG2s5.png"
       },
       "gos": {
         "name": "Garden of Salvation",
         "maxplayers": 6,
-        "image": "./data/images/flavor/garden_of_salvation.png"
+        "flavor": "https://i.imgur.com/O8CJ1pL.png"
       },
       "throne": {
         "name": "shattered Throne",
         "maxplayers": 4,
-        "image": "./data/images/flavor/shattered_throne.png"
+        "flavor": "https://i.imgur.com/86q3Us5.png"
       }
     },
     "color": "#00ff00",
-    "thumbnail": "./data/images/badge/raid.png"
+    "thumbnail": "https://i.imgur.com/uzOx6Ca.png"
   },
   "crucible": {
     "mode": {
       "clash": {
         "name": "Clash",
         "maxplayers": 6,
-        "image": ""
+        "flavor": ""
       },
       "labs": {
         "name": "Crucible Labs",
         "maxplayers": 3,
-        "image": ""
+        "flavor": ""
       },
       "showdown": {
         "name": "Showdown",
         "maxplayers": 4,
-        "image": ""
+        "flavor": ""
       },
       "rumble": {
         "name": "Rumble",
         "maxplayers": 6,
-        "image": ""
+        "flavor": ""
       },
       "control": {
         "name": "Control",
         "maxplayers": 6,
-        "image": ""
+        "flavor": ""
       },
       "survival": {
         "name": "Survival",
         "maxplayers": 3,
-        "image": ""
+        "flavor": ""
       },
       "private": {
         "name": "Private Match",
         "maxplayers": 12,
-        "image": ""
+        "flavor": ""
       },
       "ironbanner": {
         "name": "Iron Banner",
         "maxplayers": 6,
-        "image": ""
+        "flavor": ""
       },
       "classic": {
         "name": "Classic Mix",
         "maxplayers": 6,
-        "image": ""
+        "flavor": ""
       }
     },
     "color": "#ff0000",
-    "thumbnail": "./data/images/badge/crucible.png"
+    "thumbnail": "https://i.imgur.com/TK6oF6F.png"
   },
   "gambit": {
     "mode": {
       "classic": {
         "name": "Gambit Classic",
         "maxplayers": 4,
-        "thumbnail": ""
+        "flavor": ""
       },
       "prime": {
         "name": "Gambit Prime",
         "maxplayers": 4,
-        "thumbnail": ""
+        "flavor": ""
       }
     },
-    "color": "#7DD321",
-    "thumbnail": "./data/images/badge/gambit.png"
+    "color": "#7dd321",
+    "thumbnail": "https://i.imgur.com/KZlSUoa.png"
   },
   "custom": {
     "color": "#0000ff",
-    "thumbnail": "./data/images/badge/custom.png"
+    "thumbnail": "https://i.imgur.com/uypCquU.png"
   }
 }

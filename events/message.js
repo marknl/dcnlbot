@@ -32,10 +32,10 @@ class Message {
         if (cmd.cooldown.has(message.author.id)) return message.delete();
 
         cmd.setMessage(message);
-        cmd.run(message, args);
-
-        // Delete message
-        // message.delete();
+        if (cmd.run(message, args) === true) {
+            // Delete message
+            //message.delete();
+        }
 
         if (cmd.conf.cooldown > 0) cmd.startCooldown(message.author.id);
     }

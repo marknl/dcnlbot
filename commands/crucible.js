@@ -24,7 +24,7 @@ class Crucible extends Command {
 
         // Set usage
         this.help.description = 'Hoe maak ik een crucible activiteit aan:';
-        this.help.usage = `${this.client.config.prefix}crucible <MODE> <DATUM> <TIJD> [NOTE]
+        this.help.usage = `${this.client.config.prefix}crucible <MODE> <DATUM> <TIJD> <SPELERS> [NOTE]
 
 <MODE>      Moet een geldige crucible mode zijn. Geldige modes zijn:
             ${Object.keys(this.data.mode).join(', ')}.
@@ -34,6 +34,8 @@ class Crucible extends Command {
 
 <TIJD>      Moet een geldige tijd zijn. Tijd formaat moet zijn: HH:mm.
             Voorbeeld: ${Moment().format('HH:mm')} voor de huidige tijd.
+            
+<SPELERS>   Aantal spelers. Moet een geldig getal zijn. 
 
 [NOTE]      Deze optie kan gebruikt worden om een notitie toe te voegen aan de activiteit.
             Dit is een optioneel veld.`;
@@ -57,6 +59,8 @@ class Crucible extends Command {
                 await embedActivity.react('❎');
                 await embedActivity.react('🕒');
             });
+
+            return true;
         }
     }
 }
