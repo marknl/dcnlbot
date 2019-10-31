@@ -30,6 +30,8 @@ class MessageReactionAdd {
 
         // Grab the original embedMessage
         let orgEmbed = new RichEmbed(reaction.message.embeds[0]);
+        orgEmbed.setThumbnail('attachment://thumb.png');
+        orgEmbed.setImage('attachment://flavor.png')
 
         // const exampleEmbed = new RichEmbed(orgEmbed).setTitle('New title');
         // reaction.message.channel.send(exampleEmbed);

@@ -4,61 +4,61 @@
       "lev": {
         "name": "Leviathan",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/NokqJCK.png"
+        "flavor": "./data/images/flavor/leviathan.png"
       },
       "levpres": {
         "name": "Leviathan (Prestige)",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/NokqJCK.png"
+        "flavor": "./data/images/flavor/leviathan.png"
       },
       "eow": {
         "name": "Eater of Worlds",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/jFOOZTJ.png"
+        "flavor": "./data/images/flavor/eater_of_worlds.png"
       },
       "eowpres": {
         "name": "Eater of Worlds (Prestige)",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/jFOOZTJ.png"
+        "thumbnail": "./data/images/flavor/eater_of_worlds.png"
       },
       "sos": {
         "name": "Spire of Stars",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/yDWkfYw.png"
+        "flavor": "./data/images/flavor/spire_of_stars.png"
       },
       "sospres": {
         "name": "Spire of Stars (Prestige)",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/yDWkfYw.png"
+        "thumbnail": "./data/images/flavor/spire_of_stars.png"
       },
       "lw": {
         "name": "Last Wish",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/L92I94E.png"
+        "flavor": "./data/images/flavor/last_wish.png"
       },
       "sotp": {
         "name": "Scourge of the Past",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/ECCoIFh.png"
+        "flavor": "./data/images/flavor/scourge_of_the_past.png"
       },
       "cos": {
         "name": "Crown of Sorrow",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/xiIG2s5.png"
+        "flavor": "./data/images/flavor/crown_of_sorrow.png"
       },
       "gos": {
         "name": "Garden of Salvation",
         "maxplayers": 6,
-        "flavor": "https://i.imgur.com/O8CJ1pL.png"
+        "flavor": "./data/images/flavor/garden_of_salvation.png"
       },
       "throne": {
         "name": "shattered Throne",
         "maxplayers": 4,
-        "flavor": "https://i.imgur.com/86q3Us5.png"
+        "flavor": "./data/images/flavor/shattered_throne.png"
       }
     },
     "color": "#00ff00",
-    "thumbnail": "https://i.imgur.com/uzOx6Ca.png"
+    "thumbnail": "./data/images/badge/raid.png"
   },
   "crucible": {
     "mode": {
@@ -109,7 +109,7 @@
       }
     },
     "color": "#ff0000",
-    "thumbnail": "https://i.imgur.com/TK6oF6F.png"
+    "thumbnail": "./data/images/badge/crucible.png"
   },
   "gambit": {
     "mode": {
@@ -125,10 +125,10 @@
       }
     },
     "color": "#7dd321",
-    "thumbnail": "https://i.imgur.com/KZlSUoa.png"
+    "thumbnail": "./data/images/badge/gambit.png"
   },
   "custom": {
     "color": "#0000ff",
-    "thumbnail": "https://i.imgur.com/uypCquU.png"
+    "thumbnail": "./data/images/badge/custom.png"
   }
 }
