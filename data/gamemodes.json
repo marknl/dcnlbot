@@ -65,47 +65,52 @@
       "clash": {
         "name": "Clash",
         "maxplayers": 6,
-        "flavor": ""
+        "flavor": "./data/images/flavor/clash.png"
       },
       "labs": {
         "name": "Crucible Labs",
         "maxplayers": 3,
-        "flavor": ""
+        "flavor": "./data/images/flavor/crucible_labs.png"
       },
       "showdown": {
         "name": "Showdown",
         "maxplayers": 4,
-        "flavor": ""
+        "flavor": "./data/images/flavor/showdown.png"
       },
       "rumble": {
         "name": "Rumble",
         "maxplayers": 6,
-        "flavor": ""
+        "flavor": "./data/images/flavor/rumble.png"
       },
       "control": {
         "name": "Control",
         "maxplayers": 6,
-        "flavor": ""
+        "flavor": "./data/images/flavor/control.png"
       },
       "survival": {
         "name": "Survival",
         "maxplayers": 3,
-        "flavor": ""
+        "flavor": "./data/images/flavor/survival.png"
+      },
+      "supremacy": {
+        "name": "Supremacy",
+        "maxplayers": 6,
+        "flavor": "./data/images/flavor/supremacy.png"
       },
       "private": {
         "name": "Private Match",
         "maxplayers": 12,
-        "flavor": ""
+        "flavor": "./data/images/flavor/private.png"
       },
       "ironbanner": {
         "name": "Iron Banner",
         "maxplayers": 6,
-        "flavor": ""
+        "flavor": "./data/images/flavor/iron_banner.png"
       },
       "classic": {
         "name": "Classic Mix",
         "maxplayers": 6,
-        "flavor": ""
+        "flavor": "./data/images/flavor/classic_mix.png"
       }
     },
     "color": "#ff0000",
