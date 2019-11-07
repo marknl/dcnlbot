@@ -16,6 +16,7 @@ class Ready {
     }
 
     run() {
+        this.client.setVersion();
         this.client.scheduleTasks();
     }
 

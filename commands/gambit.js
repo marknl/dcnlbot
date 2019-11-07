@@ -16,7 +16,7 @@ class Gambit extends Command {
         super(client, {
             name: "gambit",
             category: "activity",
-            cooldown: 1000,
+            cooldown: 2000,
             permission: "READ_MESSAGE"
         });
 

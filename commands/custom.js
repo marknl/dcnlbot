@@ -16,7 +16,7 @@ class Custom extends Command {
         super(client, {
             name: "custom",
             category: "activity",
-            cooldown: 1000,
+            cooldown: 2000,
             permission: "READ_MESSAGE"
         });
 
@@ -24,7 +24,7 @@ class Custom extends Command {
 
         // Set usage
         this.help.description = 'Hoe maak ik een persoonlijke activiteit aan:';
-        this.help.usage = `${this.client.config.prefix}custom <DATUM> <TIJD> <AANTAL> [NOTE]
+        this.help.usage = `${this.client.config.prefix}custom <DATUM> <TIJD> <AANTAL> <NOTE>
 
 <DATUM>     Moet een geldige datum zijn. Datum formaat moet zijn: DD-MM-YYYY.
             Voorbeeld: ${Moment().format('DD-MM-YYYY')} voor ${Moment().format('LL')}.
@@ -34,8 +34,8 @@ class Custom extends Command {
 
 <AANTAL>    Het aantal spelers voor deze activiteit. (Moet een cijfer zijn)
 
-[NOTE]      Deze optie kan gebruikt worden om een notitie toe te voegen aan de activiteit.
-            Dit is een optioneel veld.`;
+<NOTE>      Deze optie bevat informatie over de persoonlijke activiteit.
+            Dit veld is verplicht.`;
     }
 
     /**
@@ -45,6 +45,12 @@ class Custom extends Command {
      * @returns {boolean}
      */
     run(message, args) {
+
+        // The custom command doesn't have a activity name, so we inject it here, to bring it in line
+        // with all other commands.
+        // todo: Write separate validateion / createEmbed functions for each activity type.
+        args.unshift('custom');
+
         if (this.validateInput('custom', args, this.data) === true) {
 
             if (args[0] === 'help') { this.sendHelp(); return true; }

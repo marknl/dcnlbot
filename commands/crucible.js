@@ -16,7 +16,7 @@ class Crucible extends Command {
         super(client, {
             name: "crucible",
             category: "activity",
-            cooldown: 1000,
+            cooldown: 2000,
             permission: "READ_MESSAGE"
         });
 

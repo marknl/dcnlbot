@@ -16,7 +16,7 @@ class Raid extends Command {
         super(client, {
             name: "raid",
             category: "activity",
-            cooldown: 1000,
+            cooldown: 2000,
             permission: "READ_MESSAGE"
         });
 

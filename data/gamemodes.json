@@ -133,6 +133,13 @@
     "thumbnail": "./data/images/badge/gambit.png"
   },
   "custom": {
+    "mode": {
+      "custom": {
+        "name": "Persoonlijke activiteit",
+        "maxplayers": 6,
+        "flavor": "./data/images/flavor/custom.png"
+      }
+    },
     "color": "#0000ff",
     "thumbnail": "./data/images/badge/custom.png"
   }

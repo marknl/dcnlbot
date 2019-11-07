@@ -19,7 +19,7 @@ class EmbedDateTime extends Task {
     }
 
     run(task) {
-        console.log(`Task ${task.help.name} triggered.`);
+        console.log(`[TASK] ${task.help.name} triggered.`);
         // Find all embeds and update date / time
         //console.log(task.client.channels);
         clearInterval(this);
