@@ -61,7 +61,7 @@ class MessageReactionAdd {
         if (reaction.emoji.name === '✅') {
             await embedReactions.get('✅').fetchUsers().then(users => {
                 const participants = users.filter(user => !user.bot).map((user) => { return user.username });
-                if (participants.length >= orgEmbed.fields[3].value) {
+                if (participants.length > orgEmbed.fields[3].value) {
                     embedReactions.get('✅').remove(user);
                     reaction.message.channel.send(`Sorry ${user.username}! Deze activiteit is vol! Je kan jezelf nog wel aan de wachtlijst toevoegen.`)
                         .then(msg => { msg.delete(5000) })
