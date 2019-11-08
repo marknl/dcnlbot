@@ -55,6 +55,11 @@
         "name": "shattered Throne",
         "maxplayers": 4,
         "flavor": "./data/images/flavor/shattered_throne.png"
+      },
+      "poh": {
+        "name": "Pit of Heresy",
+        "maxplayers": 4,
+        "flavor": "./data/images/flavor/pit_of_heresy.png"
       }
     },
     "color": "#00ff00",
