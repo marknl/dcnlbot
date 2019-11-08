@@ -9,7 +9,7 @@
       "levpres": {
         "name": "Leviathan (Prestige)",
         "maxplayers": 6,
-        "flavor": "./data/images/flavor/leviathan.png"
+        "flavor": "./data/images/flavor/leviathan_prestige.png"
       },
       "eow": {
         "name": "Eater of Worlds",
@@ -19,7 +19,7 @@
       "eowpres": {
         "name": "Eater of Worlds (Prestige)",
         "maxplayers": 6,
-        "thumbnail": "./data/images/flavor/eater_of_worlds.png"
+        "thumbnail": "./data/images/flavor/eater_of_worlds_prestige.png"
       },
       "sos": {
         "name": "Spire of Stars",
@@ -29,7 +29,7 @@
       "sospres": {
         "name": "Spire of Stars (Prestige)",
         "maxplayers": 6,
-        "thumbnail": "./data/images/flavor/spire_of_stars.png"
+        "thumbnail": "./data/images/flavor/spire_of_stars_prestige.png"
       },
       "lw": {
         "name": "Last Wish",
@@ -121,12 +121,12 @@
       "classic": {
         "name": "Gambit Classic",
         "maxplayers": 4,
-        "flavor": ""
+        "flavor": "./data/images/flavor/gambit_classic.png"
       },
       "prime": {
         "name": "Gambit Prime",
         "maxplayers": 4,
-        "flavor": ""
+        "flavor": "./data/images/flavor/gambit_prime.png"
       }
     },
     "color": "#7dd321",
