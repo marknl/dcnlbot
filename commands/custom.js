@@ -46,14 +46,15 @@ class Custom extends Command {
      */
     run(message, args) {
 
+        // Help requested, return help
+        if (args[0] === 'help') { this.sendHelp(); return true; }
+
         // The custom command doesn't have a activity name, so we inject it here, to bring it in line
         // with all other commands.
-        // todo: Write separate validateion / createEmbed functions for each activity type.
+        // todo: Write separate validation / createEmbed functions for each activity type.
         args.unshift('custom');
 
         if (this.validateInput('custom', args, this.data) === true) {
-
-            if (args[0] === 'help') { this.sendHelp(); return true; }
 
             let embed = this.createActivityEmbed('Custom', args, this.data);
 

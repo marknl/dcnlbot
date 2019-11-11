@@ -48,9 +48,11 @@ class Raid extends Command {
      * @returns {boolean}
      */
     run(message, args) {
-        if (this.validateInput('raid', args, this.data) === true) {
 
-            if (args[0] === 'help') { this.sendHelp(); return true; }
+        // Help requested, return help
+        if (args[0] === 'help') { this.sendHelp(); return true; }
+
+        if (this.validateInput('raid', args, this.data) === true) {
 
             let embed = this.createActivityEmbed('Raid', args, this.data);
 
