@@ -1,6 +1,7 @@
 {
 	"token": "TOKEN",
 	"prefix": "!",
+	"purgedays": 2,
 	"paths": {
 		"commands": "./commands",
 		"events": "./events",
